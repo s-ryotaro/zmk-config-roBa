@@ -7,6 +7,8 @@
 #define SCROLL 5
 #define NUM 6
 
+///test
+
 // #includeのあとのあたりにスクロール量を変更
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 100
 
