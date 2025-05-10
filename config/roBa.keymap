@@ -29,7 +29,7 @@
 
         close_window {
             bindings = <&kp LA(F4)>;
-            key-positions = <3 4>;
+            key-positions = <4 2>;
         };
     };
 
@@ -68,35 +68,35 @@
             tap-ms = <20>;
         };
 
-        TAPDANCE: new_behavior {
+        tapdance_mainasu_purasu: tapdance_mainasu_purasu {
             compatible = "zmk,behavior-tap-dance";
             label = "NEW_BEHAVIOR(-,+)";
             #binding-cells = <0>;
             bindings = <&kp MINUS>, <&kp PLUS>;
         };
 
-        TAPDANCE: TAP_DANCE__,_ {
+        tapdance_kakeru_waru: tapdance_kakeru_waru {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP DANCE *,/";
             #binding-cells = <0>;
             bindings = <&kp ASTERISK>, <&kp SLASH>;
         };
 
-        TapDNC_: TapDNC___ {
+        tapdance_buraketto: tapdance_buraketto {
             compatible = "zmk,behavior-tap-dance";
             label = "TAPDNC_[]";
             #binding-cells = <0>;
             bindings = <&kp LEFT_BRACKET>, <&kp RIGHT_BRACKET>;
         };
 
-        TapDNC_: TapDNC___ {
+        tapdance_tyuukakko: tapdance_tyuukakko {
             compatible = "zmk,behavior-tap-dance";
             label = "TAPDNC_{}";
             #binding-cells = <0>;
             bindings = <&kp LEFT_BRACE>, <&kp RIGHT_BRACE>;
         };
 
-        TapDNC_: TapDNC__,_ {
+        tapdance_nakaten_hatena: tapdance_nakaten_hatena {
             compatible = "zmk,behavior-tap-dance";
             label = "TAPDNC_・,?";
             #binding-cells = <0>;
@@ -120,10 +120,10 @@
 
         NUMBER {
             bindings = <
-&kp Q   &trans  &trans  &trans  &trans                      &kp EQUAL        &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp BACKSPACE
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &TAPDANCE (*,/)  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_NUMBER_0
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &TAPDANCE(-,+)   &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                              &trans
+&kp Q   &trans  &trans  &trans  &trans                      &kp EQUAL                 &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp BACKSPACE
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &tapdance_mainasu_purasu  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_NUMBER_0
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &tapdance_mainasu_purasu  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                                       &trans
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -142,10 +142,10 @@
 
         SIMBOL {
             bindings = <
-&kp EXCLAMATION  &kp DOUBLE_QUOTES  &kp HASH  &kp DOLLAR  &kp LS(PERCENT)                      &kp SQT               &kp AMPERSAND          &kp TILDE          &kp LC(INT_YEN)  &kp PIPE
-&trans           &trans             &trans    &trans      &trans           &trans      &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LS(SEMICOLON)  &kp COLON        &kp AT_SIGN
-&trans           &trans             &trans    &trans      &trans           &trans      &trans  &kp LESS_THAN         &kp GREATER_THAN       &TapDNC_・,?        &kp UNDERSCORE   &TapDNC_[]
-&trans           &trans             &trans    &trans      &trans           &trans      &trans  &trans                                                                           &TapDNC_{}
+&kp EXCLAMATION  &kp DOUBLE_QUOTES  &kp HASH  &kp DOLLAR  &kp LS(PERCENT)                      &kp SQT               &kp AMPERSAND          &kp TILDE            &kp LC(INT_YEN)  &kp PIPE
+&trans           &trans             &trans    &trans      &trans           &trans      &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LS(SEMICOLON)    &kp COLON        &kp AT_SIGN
+&trans           &trans             &trans    &trans      &trans           &trans      &trans  &kp LESS_THAN         &kp GREATER_THAN       &tapdance_buraketto  &kp UNDERSCORE   &tapdance_buraketto
+&trans           &trans             &trans    &trans      &trans           &trans      &trans  &trans                                                                             &tapdance_buraketto
             >;
         };
 
