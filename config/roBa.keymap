@@ -78,28 +78,28 @@
             compatible = "zmk,behavior-tap-dance";
             label = "NEW_BEHAVIOR(-,+)";
             #binding-cells = <0>;
-            bindings = <&kp MINUS>, <&kp PLUS>;
+            bindings = <&kp MINUS>, <&kp SEMICOLON>;
         };
 
         tapdance_kakeru_waru: tapdance_kakeru_waru {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP DANCE *,/";
             #binding-cells = <0>;
-            bindings = <&kp ASTERISK>, <&kp SLASH>;
+            bindings = <&kp LS(N8)>, <&kp SLASH>;
         };
 
         tapdance_buraketto: tapdance_buraketto {
             compatible = "zmk,behavior-tap-dance";
             label = "TAPDNC_[]";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_BRACKET>, <&kp RIGHT_BRACKET>;
+            bindings = <&kp RIGHT_BRACKET>, <&kp BACKSLASH>;
         };
 
         tapdance_tyuukakko: tapdance_tyuukakko {
             compatible = "zmk,behavior-tap-dance";
             label = "TAPDNC_{}";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_BRACE>, <&kp RIGHT_BRACE>;
+            bindings = <&kp RIGHT_BRACE>, <&kp PIPE>;
         };
 
         tapdance_nakaten_hatena: tapdance_nakaten_hatena {
@@ -148,10 +148,10 @@
 
         SIMBOL {
             bindings = <
-&kp LS(NUMBER_1)  &kp AT_SIGN     &kp HASH         &kp DOLLAR     &kp LS(PERCENT)                        &kp AMPERSAND          &kp AMPERSAND          &kp TILDE            &kp LC(INT_YEN)  &kp PIPE
-&kp PLUS          &kp MINUS       &kp SLASH        &kp ASTERISK   &kp EQUAL          &trans      &trans  &kp RIGHT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LS(SEMICOLON)    &kp SQT          &kp LEFT_BRACKET
-&kp CARET         &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp BACKSLASH  &kp RIGHT_BRACKET  &trans      &trans  &kp LESS_THAN          &kp GREATER_THAN       &tapdance_buraketto  &kp UNDERSCORE   &tapdance_buraketto
-&kp LEFT_CONTROL  &kp LSHIFT      &trans           &trans         &trans             &trans      &trans  &trans                                                                              &tapdance_buraketto
+&kp LS(NUMBER_1)  &kp AT_SIGN  &kp HASH  &kp DOLLAR  &kp LS(PERCENT)                      &kp AMPERSAND  &kp LS(N7)            &kp PLUS             &kp LC(INTERNATIONAL_3)  &kp LS(SLASH)
+&trans            &trans       &trans    &trans      &trans           &trans      &trans  &kp ASTERISK   &kp LEFT_PARENTHESIS  &kp SEMICOLON        &kp SQT                  &kp LEFT_BRACKET
+&trans            &trans       &trans    &trans      &trans           &trans      &trans  &kp LESS_THAN  &kp GREATER_THAN      &tapdance_buraketto  &kp UNDERSCORE           &tapdance_buraketto
+&trans            &trans       &trans    &trans      &trans           &trans      &trans  &trans                                                                             &tapdance_buraketto
             >;
         };
 
