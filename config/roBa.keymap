@@ -78,14 +78,14 @@
             compatible = "zmk,behavior-tap-dance";
             label = "NEW_BEHAVIOR(-,+)";
             #binding-cells = <0>;
-            bindings = <&kp MINUS>, <&kp SEMICOLON>;
+            bindings = <&kp MINUS>, <&kp LS(SEMICOLON)>;
         };
 
         tapdance_kakeru_waru: tapdance_kakeru_waru {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP DANCE *,/";
             #binding-cells = <0>;
-            bindings = <&kp LS(N8)>, <&kp SLASH>;
+            bindings = <&kp ASTERISK>, <&kp SLASH>;
         };
 
         tapdance_buraketto: tapdance_buraketto {
@@ -115,10 +115,10 @@
 
         default_layer {
             bindings = <
-&kp ESCAPE        &kp W         &kp E         &kp R                              &kp T                                            &kp Y        &kp U  &kp I                     &kp O                &kp P
-&kp A             &kp S         &kp D         &kp F                              &kp G        &kp LS(LG(S))      &kp DELETE       &kp H        &kp J  &kp K                     &kp L                &lt 5 PERIOD
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                              &kp B        &mo 6              &lt 3 F2         &kp N        &kp M  &tapdance_nakaten_hatena  &tapdance_tyuukakko  &mt LEFT_SHIFT COMMA
-&kp LCTRL         &kp LEFT_ALT  &kp LEFT_GUI  &lt_to_layer_0 6 LA(SINGLE_QUOTE)  &lt 3 SPACE  &lt 7 INT2         &lt 2 BACKSPACE  &lt 1 ENTER                                                        &kp LEFT_CONTROL
+&kp ESCAPE        &kp W         &kp E         &kp R                   &kp T                                            &kp Y        &kp U  &kp I                     &kp O                &kp P
+&kp A             &kp S         &kp D         &kp F                   &kp G        &kp LS(LG(S))      &kp DELETE       &kp H        &kp J  &kp K                     &kp L                &lt 5 PERIOD
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                   &kp B        &mo 6              &lt 3 F2         &kp N        &kp M  &tapdance_nakaten_hatena  &tapdance_tyuukakko  &mt LEFT_SHIFT COMMA
+&kp LCTRL         &kp LEFT_ALT  &kp LEFT_GUI  &lt 6 LA(LEFT_BRACKET)  &lt 3 SPACE  &lt 7 INT2         &lt 2 BACKSPACE  &lt 1 ENTER                                                        &kp LEFT_CONTROL
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -126,10 +126,10 @@
 
         NUMBER {
             bindings = <
-&kp Q   &trans  &trans  &trans  &trans                      &kp UNDERSCORE            &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp BACKSPACE
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &tapdance_mainasu_purasu  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_NUMBER_0
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &tapdance_kakeru_waru     &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                                       &trans
+&kp Q   &trans  &trans  &trans  &trans                        &kp UNDERSCORE            &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp BACKSPACE
+&trans  &trans  &trans  &trans  &trans  &trans        &trans  &tapdance_mainasu_purasu  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_NUMBER_0
+&trans  &trans  &trans  &trans  &trans  &kp INT2      &trans  &tapdance_kakeru_waru     &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD
+&trans  &trans  &trans  &trans  &trans  &trans        &trans  &trans                                                                       &trans
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -148,10 +148,10 @@
 
         SIMBOL {
             bindings = <
-&kp LS(NUMBER_1)  &kp AT_SIGN  &kp HASH  &kp DOLLAR  &kp LS(PERCENT)                      &kp AMPERSAND  &kp LS(N7)            &kp PLUS             &kp LC(INTERNATIONAL_3)  &kp LS(BACKSLASH)
-&trans            &trans       &trans    &trans      &trans           &trans      &trans  &kp ASTERISK   &kp LEFT_PARENTHESIS  &kp SEMICOLON        &kp SQT                  &kp LEFT_BRACKET
-&trans            &trans       &trans    &trans      &trans           &trans      &trans  &kp LESS_THAN  &kp GREATER_THAN      &tapdance_buraketto  &kp LS(UNDERSCORE)       &tapdance_buraketto
-&trans            &trans       &trans    &trans      &trans           &trans      &trans  &trans                                                                             &tapdance_buraketto
+&kp LS(NUMBER_1)  &kp AT_SIGN  &kp HASH  &kp DOLLAR  &kp LS(PERCENT)                      &kp AMPERSAND  &kp LS(N6)            &kp PLUS             &kp INTERNATIONAL_3  &kp PIPE
+&trans            &trans       &trans    &trans      &trans           &trans      &trans  &kp ASTERISK   &kp LEFT_PARENTHESIS  &kp SEMICOLON        &kp SQT              &kp LEFT_BRACKET
+&trans            &trans       &trans    &trans      &trans           &trans      &trans  &kp LESS_THAN  &kp GREATER_THAN      &tapdance_buraketto  &kp INTERNATIONAL_1  &tapdance_buraketto
+&trans            &trans       &trans    &trans      &trans           &trans      &trans  &trans                                                                         &tapdance_buraketto
             >;
         };
 
