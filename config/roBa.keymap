@@ -2,12 +2,18 @@
 #define JP_ASTERISK     DOUBLE_QUOTES     // *
 #define JP_PLUS         COLON             // +
 #define JP_AMPERSAND    CARET             // &
-#define JP_UNDERSCORE   LS(0x87)          // _
+#define JP_BSLH         INT1              // (backslash)
+#define JP_UNDERSCORE   LS(0x87)          // _※動作せず
+#define JP_UNDER        LS(JP_BSLH)       // _
 #define JP_YEN          0x89              // ¥
 #define JP_PIPE         LS(0x89)          // |
 #define JP_KANA         LANGUAGE_1        // かな
 #define JP_EISU         LANGUAGE_2        // 英数
 #define JP_HANZEN       GRAVE             // 半角/全角
+#define JP_MHEN  INT5                     // Muhenkan (無変換)
+#define JP_HENK  INT4                     // Henkan (変換)
+
+
 
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 100 // #includeのあとのあたりにスクロール量を変更 but
 
@@ -135,7 +141,7 @@
             sensor-bindings = <&scroll_up_down>;
         };
 
-        NUMBER {
+        1_NUMBER {
             bindings = <
 &kp Q   &trans  &trans  &trans  &trans                        &kp UNDERSCORE            &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp BACKSPACE
 &trans  &trans  &trans  &trans  &trans  &trans        &trans  &tapdance_mainasu_purasu  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_0
@@ -146,7 +152,7 @@
             sensor-bindings = <&scroll_up_down>;
         };
 
-        ARROW {
+        2_ARROW {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans          &kp UP_ARROW    &kp HOME         &kp END
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PAGE_UP
@@ -157,16 +163,16 @@
             sensor-bindings = <&scroll_up_down>;
         };
 
-        SIMBOL {
+        3_SIMBOL {
             bindings = <
 &kp LS(NUMBER_1)  &kp AT_SIGN  &kp HASH  &kp DOLLAR  &kp LS(PERCENT)                      &kp JP_AMPERSAND  &kp LS(N6)            &kp PLUS             &kp JP_YEN           &kp JP_PIPE
 &trans            &trans       &trans    &trans      &trans           &trans      &trans  &kp ASTERISK      &kp LEFT_PARENTHESIS  &kp SEMICOLON        &kp SQT              &kp LEFT_BRACKET
-&trans            &trans       &trans    &trans      &trans           &trans      &trans  &kp LESS_THAN     &kp GREATER_THAN      &tapdance_buraketto  &kp UNDERSCORE       &tapdance_buraketto
+&trans            &trans       &trans    &trans      &trans           &trans      &trans  &kp LESS_THAN     &kp GREATER_THAN      &tapdance_buraketto  &kp JP_UNDER         &tapdance_buraketto
 &trans            &trans       &trans    &trans      &trans           &trans      &trans  &trans                                                                            &tapdance_buraketto
             >;
         };
 
-        MOUSE {
+        4_MOUSE {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans     &trans     &trans     &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans
@@ -177,7 +183,7 @@
             sensor-bindings = <&scroll_up_down>;
         };
 
-        SCROLL {
+        5_SCROLL {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans  &mkp MB4  &mkp MB5  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans    &trans  &trans
@@ -188,7 +194,7 @@
             sensor-bindings = <&scroll_up_down>;
         };
 
-        DEVICE {
+        6_DEVICE {
             bindings = <
 &trans  &trans        &trans        &trans        &trans                                &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
 &trans  &trans        &trans        &trans        &trans  &bootloader      &bootloader  &trans        &trans        &trans        &trans        &trans
@@ -199,7 +205,7 @@
             sensor-bindings = <&scroll_up_down>;
         };
 
-        MACRO {
+        7_MACRO {
             bindings = <
 &trans  &trans  &kp LG(N7)  &kp LG(N8)  &kp LG(N9)                      &trans  &kp LC(LS(TAB))  &kp LG(UP)    &kp LC(TAB)    &kp LA(UP)
 &trans  &trans  &kp LG(N4)  &kp LG(N5)  &kp LG(N6)  &trans      &trans  &trans  &kp LG(LEFT)     &kp LG(DOWN)  &kp LG(RIGHT)  &trans
