@@ -97,7 +97,7 @@
             label = "TAPDNC_DOUBLECLICK";
             #binding-cells = <0>;
             tapping-term-ms = <150>;
-            bindings = <&kp LCLK &kp LCLK>;
+            bindings = <&kp A>, <&kp B> ;//<&kp LCLK &kp LCLK>
         };
 
         tapdance_mainasu_purasu: tapdance_mainasu_purasu {
