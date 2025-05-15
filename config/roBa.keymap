@@ -92,15 +92,13 @@
         };
 
 
-        tap_dances {
-            compatible = "zmk,tap-dances";
-            single_tap_double_click {
-                tapping-term-ms = <150> ; // シングルタップと認識する最大時間 (実際には即時)
-                bindings = <
-                    &kp LCLK &kp LCLK  // シングルタップ時に左クリックを2回送信
-                >;
-            };
-        }; 
+        single_tap_double_click: single_tap_double_click {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAPDNC_DOUBLECLICK";
+            #binding-cells = <0>;
+            tapping-term-ms = <150>;
+            bindings = <&kp LCLK>, <&kp LCLK>;
+        };
 
         tapdance_mainasu_purasu: tapdance_mainasu_purasu {
             compatible = "zmk,behavior-tap-dance";
