@@ -95,7 +95,7 @@
         tap_dances {
             compatible = "zmk,tap-dances";
             single_tap_double_click {
-                tapping-term-ms = ; // シングルタップと認識する最大時間 (実際には即時)
+                tapping-term-ms = <150> ; // シングルタップと認識する最大時間 (実際には即時)
                 bindings = <
                     &kp LCLK &kp LCLK  // シングルタップ時に左クリックを2回送信
                 >;
@@ -185,7 +185,7 @@
         4_MOUSE {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans     &trans                        &trans     &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &mkp LCLK　&td single_tap_double_click   &mkp MCLK  &mkp RCLK  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &mkp LCLK  &td single_tap_double_click   &mkp MCLK  &mkp RCLK  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans     &trans                        &trans     &trans     &kp C_SLOW2
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                   &kp C_SLOW_TRACKING
             >;
