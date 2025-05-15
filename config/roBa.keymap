@@ -83,21 +83,19 @@
             tapping-term-ms = <200>;
         };
 
+        doubleclick_macro: doubleclick_macro {
+            compatible = "zmk,behavior-macro";
+            label = "DOUBLECLICK_MACRO";
+            #binding-cells = <0>;
+            bindings = <&mkp LCLK>, <&wait 20>, <&mkp LCLK>;
+        };
+
         scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
 
             tap-ms = <20>;
-        };
-
-
-        single_tap_double_click: single_tap_double_click {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAPDNC_DOUBLECLICK";
-            #binding-cells = <0>;
-            tapping-term-ms = <150>;
-            bindings = <&kp A>, <&kp B> ;//<&kp LCLK &kp LCLK>
         };
 
         tapdance_mainasu_purasu: tapdance_mainasu_purasu {
@@ -184,8 +182,8 @@
         4_MOUSE {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans     &trans                     &trans     &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &mkp LCLK  &single_tap_double_click   &mkp MCLK  &mkp RCLK  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans     &trans                     &trans     &trans     &kp C_SLOW2
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans     &mkp LCLK                  &mkp MCLK  &mkp RCLK  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans     &doubleclick_macro         &trans     &trans     &kp C_SLOW2
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                &kp C_SLOW_TRACKING
             >;
 
