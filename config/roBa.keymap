@@ -183,10 +183,10 @@
 
         4_MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans     &trans                        &trans     &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &mkp LCLK  &td single_tap_double_click   &mkp MCLK  &mkp RCLK  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans     &trans                        &trans     &trans     &kp C_SLOW2
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                   &kp C_SLOW_TRACKING
+&trans  &trans  &trans  &trans  &trans                      &trans     &trans                     &trans     &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &mkp LCLK  &single_tap_double_click   &mkp MCLK  &mkp RCLK  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans     &trans                     &trans     &trans     &kp C_SLOW2
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                &kp C_SLOW_TRACKING
             >;
 
             sensor-bindings = <&scroll_up_down>;
