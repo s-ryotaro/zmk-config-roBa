@@ -100,7 +100,8 @@
                     &kp LCLK &kp LCLK  // シングルタップ時に左クリックを2回送信
                 >;
             };
-
+        }; 
+        
         tapdance_mainasu_purasu: tapdance_mainasu_purasu {
             compatible = "zmk,behavior-tap-dance";
             label = "NEW_BEHAVIOR(-,+)";
