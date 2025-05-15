@@ -67,7 +67,7 @@
         DoubleClick: DoubleClick {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press>, <&mkp LCLK>, <&mkp LCLK>;
+            bindings = <&mkp LCLK>, <&mkp LCLK>;
 
             label = "DOUBLECLICK";
         };
