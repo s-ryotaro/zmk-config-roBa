@@ -1,16 +1,17 @@
-manifest:
-  remotes:
+manifest: #west.yml は Zephyr/ ZMK プロジェクトで複数リポジトリ依存を管理するための設定ファイルです。
+  remotes: #remotes: よく使うGitHubユーザーや組織のURLベースをまとめて定義し、remote: xxxで再利用します。
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: kumamuk-git
+    - name: kumamuk-git #remote定義は他で使う可能性があるため触らなくて良い
       url-base: https://github.com/kumamuk-git
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-    - name: zmk-pmw3610-driver
-      remote: kumamuk-git
+    - name: zmk-pmw3610-driver #12~14行部分がpmw3610ドライバの依存先を指定している箇所
+      url: https://github.com/s-ryotaro/zmk-pmw3610-driver.git
+      # remote: kumamuk-git　上記に変更したのでコメントアウト
       revision: main
   self:
     path: config
