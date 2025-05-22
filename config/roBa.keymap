@@ -13,6 +13,7 @@
 #define JP_MHEN  INT5                     // Muhenkan (無変換)
 #define JP_HENK  INT4                     // Henkan (変換)
 
+//マウス加速度を有効化したよ!
 
 
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 100 // #includeのあとのあたりにスクロール量を変更 but
