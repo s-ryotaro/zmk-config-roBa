@@ -30,7 +30,8 @@
 
 #define MOUSE 4
 #define SCROLL 5
-#define NUM 6
+#define MSNIPE 6
+#define NUM 7
 
 &mt {
     flavor = "balanced";
@@ -169,8 +170,8 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans        &trans     &trans     &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp LCLK     &mkp MCLK  &mkp RCLK  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &kp ENTER     &trans     &trans     &kp C_SLOW2
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                      &kp C_SLOW_TRACKING
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &kp ENTER     &trans     &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                      &trans
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -187,7 +188,18 @@
             sensor-bindings = <&scroll_up_down>;
         };
 
-        6_DEVICE {
+        MSNIPE {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans        &trans     &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp LCLK     &mkp MCLK  &mkp RCLK  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &kp ENTER     &trans     &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                      &trans
+            >;
+
+            sensor-bindings = <&scroll_up_down>;
+        };
+
+        7_DEVICE {
             bindings = <
 &trans  &trans        &trans        &trans        &trans                                &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
 &trans  &trans        &trans        &trans        &trans  &bootloader      &bootloader  &trans        &trans        &trans        &trans        &trans
@@ -198,7 +210,7 @@
             sensor-bindings = <&scroll_up_down>;
         };
 
-        7_MACRO {
+        8_MACRO {
             bindings = <
 &trans  &trans  &kp LG(N7)  &kp LG(N8)  &kp LG(N9)                      &trans  &kp LC(LS(TAB))  &kp LG(UP)    &kp LC(TAB)    &kp LA(UP)
 &trans  &trans  &kp LG(N4)  &kp LG(N5)  &kp LG(N6)  &trans      &trans  &trans  &kp LG(LEFT)     &kp LG(DOWN)  &kp LG(RIGHT)  &trans
